@@ -45,6 +45,7 @@ struct AlbumCardView: View {
 
 struct AlbumCardView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumCardView(album: Album(id: 1, name: "MTV Unplugged", year: 1997))
+		let album = Album(id: 1, name: "MTV Unplugged", artist: Artist(id: 1, name: "Nirvana", image: nil), songsCount: 1, year: 1997, songs: [], artwork: nil)
+		AlbumCardView(album: album)
     }
 }

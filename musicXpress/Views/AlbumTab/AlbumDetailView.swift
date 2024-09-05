@@ -60,7 +60,7 @@ struct AlbumDetailView: View {
 
 struct AlbumDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumDetailView(album: Album(id: 1, name: "Nevermind",songsCount: 5, year: 1995, songs: [
+		let album = Album(id: 1, name: "MTV Unplugged", artist: Artist(id: 1, name: "Nirvana", image: nil), songsCount: 1, year: 1997, songs: [
 			Song(id: 1, name: "Smell Like Teen Spirit", artist: "Nirvana", imageCover: nil, album: "Nevermind"),
 			Song(id: 2, name: "Smell Like Teen Spirit", artist: "Nirvana", imageCover: nil, album: "Nevermind"),
 			Song(id: 3, name: "Smell Like Teen Spirit", artist: "Nirvana", imageCover: nil, album: "Nevermind"),
@@ -72,6 +72,7 @@ struct AlbumDetailView_Previews: PreviewProvider {
 			Song(id: 1, name: "Smell Like Teen Spirit", artist: "Nirvana", imageCover: nil, album: "Nevermind"),
 			Song(id: 1, name: "Smell Like Teen Spirit", artist: "Nirvana", imageCover: nil, album: "Nevermind"),
 			Song(id: 1, name: "Smell Like Teen Spirit", artist: "Nirvana", imageCover: nil, album: "Nevermind"),
-		]))
+		], artwork: nil)
+		AlbumDetailView(album: album)
     }
 }

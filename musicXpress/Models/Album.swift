@@ -10,13 +10,14 @@ import UIKit
 
 struct Album: Hashable, Equatable {
 	
-	var id: Int
-	var name: String
-	var artist: Artist?
-	var songsCount: Int?
-	var year: Int
-	var songs: [Song]?
-	var artwork: UIImage?
+	let id: Int
+	let name: String
+	let artist: Artist?
+	let songsCount: Int?
+	let year: Int
+	let songs: [Song]?
+	let artwork: UIImage?
+	let isHiRes: Bool? = false
 	
 	func hash(into hasher: inout Hasher) {
 		hasher.combine(name)

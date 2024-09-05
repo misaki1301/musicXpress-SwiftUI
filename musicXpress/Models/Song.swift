@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 struct Song {
-	var id: Int = 0
-	var name: String? = ""
-	var artist: String? = ""
+	var id: Int = .zero
+	var name: String? = .empty
+	var artist: String? = .empty
 	var imageCover: UIImage? = nil
 	var path: URL? = nil
-	var album: String? = ""
+	var album: String? = .empty
 }

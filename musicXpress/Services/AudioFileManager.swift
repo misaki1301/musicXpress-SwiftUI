@@ -115,8 +115,15 @@ class AudioFileManager: ObservableObject {
 						aux.append(song)
 					}
 				}
-				return Album(id: index, name: album.name, artist: album.artist, songsCount: aux.count, year: album.year, songs: aux, artwork: aux.first?.imageCover)
+				return Album(id: index, 
+							 name: album.name,
+							 artist: album.artist,
+							 songsCount: aux.count,
+							 year: album.year,
+							 songs: aux,
+							 artwork: aux.first?.imageCover)
 			}
+			
 			albums = albumSongs
             
             print("size of songs", songs.count)

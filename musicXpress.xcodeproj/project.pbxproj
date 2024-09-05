@@ -31,8 +31,9 @@
 		F58715F629193D5C00324B76 /* NowPlayingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58715F529193D5C00324B76 /* NowPlayingBarView.swift */; };
 		F58715F82919E9CD00324B76 /* AlbumCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58715F72919E9CD00324B76 /* AlbumCardView.swift */; };
 		F5D404A22913537B003B9267 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D404A12913537B003B9267 /* Album.swift */; };
-		F5D404A5291358C4003B9267 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = F5D404A4291358C4003B9267 /* Collections */; };
 		F5D404A729135D06003B9267 /* AlbumTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D404A629135D06003B9267 /* AlbumTabView.swift */; };
+		F5F233D42C35267500F84253 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = F5F233D32C35267500F84253 /* Collections */; };
+		F5F233D62C352AFE00F84253 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F233D52C352AEB00F84253 /* String+Utils.swift */; };
 		F5F4DFD62853E70B00CEA765 /* AudioFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4DFD52853E70B00CEA765 /* AudioFileManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		F58715F72919E9CD00324B76 /* AlbumCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCardView.swift; sourceTree = "<group>"; };
 		F5D404A12913537B003B9267 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		F5D404A629135D06003B9267 /* AlbumTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTabView.swift; sourceTree = "<group>"; };
+		F5F233D52C352AEB00F84253 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		F5F4DFD52853E70B00CEA765 /* AudioFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5D404A5291358C4003B9267 /* Collections in Frameworks */,
+				F5F233D42C35267500F84253 /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +117,7 @@
 		F505842528545C5600E903F9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F5F233D52C352AEB00F84253 /* String+Utils.swift */,
 				F505842628545C6700E903F9 /* FileHelper.swift */,
 				F505842F285699A600E903F9 /* BlurEffects.swift */,
 			);
@@ -138,6 +141,7 @@
 				F55AB4F22852919D000C1A88 /* musicXpressTests */,
 				F55AB4FC2852919D000C1A88 /* musicXpressUITests */,
 				F55AB4DB2852919A000C1A88 /* Products */,
+				F5F233D22C35267500F84253 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +240,13 @@
 			path = AlbumTab;
 			sourceTree = "<group>";
 		};
+		F5F233D22C35267500F84253 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,7 +264,7 @@
 			);
 			name = musicXpress;
 			packageProductDependencies = (
-				F5D404A4291358C4003B9267 /* Collections */,
+				F5F233D32C35267500F84253 /* Collections */,
 			);
 			productName = musicXpress;
 			productReference = F55AB4DA2852919A000C1A88 /* musicXpress.app */;
@@ -303,7 +314,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					F55AB4D92852919A000C1A88 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -372,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F233D62C352AFE00F84253 /* String+Utils.swift in Sources */,
 				F55B80102902402100419CBF /* Song.swift in Sources */,
 				F505842728545C6700E903F9 /* FileHelper.swift in Sources */,
 				F505842928545D0100E903F9 /* ArtistTabView.swift in Sources */,
@@ -433,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -465,6 +478,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -493,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -525,6 +540,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -614,7 +630,6 @@
 		F55AB5072852919D000C1A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -634,7 +649,6 @@
 		F55AB5082852919D000C1A88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -654,7 +668,6 @@
 		F55AB50A2852919D000C1A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B97JTSGWZ2;
@@ -672,7 +685,6 @@
 		F55AB50B2852919D000C1A88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B97JTSGWZ2;
@@ -740,7 +752,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F5D404A4291358C4003B9267 /* Collections */ = {
+		F5F233D32C35267500F84253 /* Collections */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F5D404A3291358C4003B9267 /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = Collections;
